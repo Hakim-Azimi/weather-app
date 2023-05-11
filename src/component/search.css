@@ -1,0 +1,93 @@
+h1, h4, p{
+    color: #fff;
+}
+.search-division{
+    border-radius: 20px;
+    width: 50%;
+    background: url("../img/jackson-hendry-eodA_8CTOFo-unsplash_11zon.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: green; */
+    padding: 1rem;
+
+}
+
+.nav-location{
+    display: flex;
+    background-color: #58555575 ;
+    width: 40%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.city-icon{
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* background-color: yellow; */
+    height: 85vh;
+
+}
+
+.white-line{
+    height: 1.5vh;
+    background-color: #ffffffa9;
+    width: 25rem;
+    margin: 1.5rem;
+    border-radius: 30px;
+}
+
+.search-box{
+    /* background-color: aqua; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.search-box input{
+    height: 2rem;
+    width: 25rem;
+    border: 0;
+    padding-left: 1rem;
+    border-radius: 40px;
+    background-color: #ffffff1c;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+    
+}
+
+.search-box input::placeholder{
+    color: #fff;
+}
+
+.search-icon{
+   margin-left: -1.5rem;
+   font-size: 20px;
+   color: #fff;
+   cursor: pointer;
+}
+.location-search{
+margin-left: -1rem;
+color: #fff;
+cursor: pointer;
+}
+.mdlocation{
+    color: #fff;
+    font-size: 22px;
+}

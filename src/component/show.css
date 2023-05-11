@@ -1,0 +1,45 @@
+.show{
+    width: 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 255, 0.452);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+h1,h2,h3,h4,h5{
+    color: rgb(255, 255, 255);
+}
+
+.show-today{
+   width: 90%;
+   height: 20vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.show-daily{
+    background-color: red;
+    width: 90%;
+    height: 45vh;
+ }
+
+.today-box{
+    background-color: #393939;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.today-box-left{
+    width: 30%;
+}
+
+.today-box-mid{
+    height: 22vh;
+    width: .4vw;
+    background-color: #fff;
+}

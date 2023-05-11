@@ -1,23 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+import ShowInformation from './component/ShowInformation';
+import Search from './component/search';
 
 function App() {
+  const [city, setCity] = useState("");
+  const [data, setData] = useState("");
+  const [submit, setSubmit] = useState(false);
+ const [searchTerm, setSearchTerm] =useState("")
+  
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(data);
+    setSubmit(true);
+    setCity(searchTerm)
+  };
+  const cityHandler = (e) => {
+    setSearchTerm(e.target.value);
+  };
+  const apiKey = "eb9386714624d110f9ae272c53b364fa";
+
+  useEffect(() => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [city,submit]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Search submitHandler={submitHandler} cityHandler={cityHandler} submit={submit} searchTerm={searchTerm} data={data} city={city}  />
+      <ShowInformation data={data}/>
     </div>
   );
 }
