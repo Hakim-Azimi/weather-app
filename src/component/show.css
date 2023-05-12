@@ -40,19 +40,9 @@ h5 {
   transition: opacity 1s ease-in-out;
 }
 
-.today-box .show {
-  opacity: 1;
-}
 
-.today-box h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: black !important;
-}
+
+
 
 .today-box-left {
   width: 40%;
