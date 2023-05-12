@@ -2,8 +2,10 @@ h1, h4, p{
     color: #fff;
 }
 .search-division{
-    border-radius: 20px;
+    border-top-right-radius: 20px;
     width: 50%;
+    border-bottom-right-radius: 20px;
+
     background: url("../img/jackson-hendry-eodA_8CTOFo-unsplash_11zon.jpg");
     background-size: cover;
     background-repeat: no-repeat;

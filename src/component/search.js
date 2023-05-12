@@ -1,12 +1,12 @@
 import "./search.css";
 import { MdLocationOn, MdLocationSearching, MdSearch } from "react-icons/md";
-const Search = ({submitHandler, cityHandler, data, searchTerm}) => {
+const Search = ({submitHandler, cityHandler, data, searchTerm, locationHandler}) => {
 
 
   return (
     <div className="search-division">
       <nav>
-        <h1> forecast</h1>
+        <h1> Waether App</h1>
         <div className="nav-location">
           <div className="city-icon">
             <MdLocationOn className="mdlocation" />
@@ -24,7 +24,7 @@ const Search = ({submitHandler, cityHandler, data, searchTerm}) => {
         </div>
       </nav>
       <main>
-        <h1>the Only Weather Forecast You need</h1>
+        <h1>The Only Weather App You need</h1>
         <div className="white-line"></div>
         <form onSubmit={submitHandler} className="search-box">
           <input
@@ -34,9 +34,9 @@ const Search = ({submitHandler, cityHandler, data, searchTerm}) => {
             placeholder="Enter location"
           />
 
-          <MdSearch className="search-icon" />
+          <MdSearch onClick={submitHandler} className="search-icon" />
 
-          <MdLocationSearching className="location-search" />
+          <MdLocationSearching onClick={locationHandler} className="location-search" />
         </form>
       </main>
     </div>
