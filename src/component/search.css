@@ -5,8 +5,9 @@ h1, h4, p{
     border-top-right-radius: 20px;
     width: 50%;
     border-bottom-right-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
 
-    background: url("../img/jackson-hendry-eodA_8CTOFo-unsplash_11zon.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/jackson-hendry-eodA_8CTOFo-unsplash_11zon.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;

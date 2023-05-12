@@ -10,9 +10,16 @@ const formattedDate = format(today, 'MMMM dd, yyyy');
         <div className="show">
         <div className="show-today">
         <h3>
-        {formattedDate}
+       
+        {data.name}
+        
         </h3>
-        <TodayWether data={data}/>
+        {data && <TodayWether data={data}/>}
+        <br/>
+         <h4>
+         {formattedDate}
+         
+         </h4>
         </div>
        
        

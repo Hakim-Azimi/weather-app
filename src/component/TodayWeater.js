@@ -8,10 +8,16 @@ const TodayWether = ({ data }) => {
   const [speed, setSpeed] = useState("");
   const [icon, setIcon] = useState(null);
   const [humidity, setHumidity] = useState(null);
+  const [min, setMin] = useState(null);
+  const [max, setMax] = useState(null);
+
+  
 
   useEffect(() => {
     if (data && data.main) {
       setTemp(data.main.temp);
+      setMax(data.main.temp_max);
+      setMin(data.main.temp_min)
       setFeelsLike(data.main.feels_like);
       setHumidity(data.main.humidity);
     }
@@ -46,6 +52,9 @@ const TodayWether = ({ data }) => {
       <div className="today-box-mid"></div>
       <div className="today-box-right">
         <p>{feelsLike && `feels like: ${feelsLike}°`}</p>
+        <p>{min && `min-temp: ${min}°`}</p>
+        <p>{max && `max-temp: ${max}°`}</p>
+
         <p>{speed && `wind: ${speed} km/h`}</p>
         <p>{humidity && `humidity: ${humidity} %`}</p>
       </div>
