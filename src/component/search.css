@@ -94,3 +94,63 @@ cursor: pointer;
     color: #fff;
     font-size: 22px;
 }
+
+/* رسپانسیو کردن اندازه فونت */
+@media screen and (max-width: 768px) {
+    h1, h4, p {
+      font-size: 16px;
+    }
+  }
+  
+  /* رسپانسیو کردن طول و عرض اجزای صفحه */
+  @media screen and (max-width: 768px) {
+    .search-division {
+      width: 100%;
+      border-radius: 0;
+    }
+    
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .nav-location {
+      margin-top: 1rem;
+      width: 80%;
+    }
+    
+    main {
+      height: auto;
+    }
+    
+    .white-line {
+      width: 80%;
+    }
+    
+    .search-box {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .search-box input {
+      width: 90%;
+      margin-top: 1rem;
+      text-align: center;
+    }
+    
+    .search-icon {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+    
+    .location-search {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+    
+    .mdlocation {
+      font-size: 18px;
+    }
+  }
+  

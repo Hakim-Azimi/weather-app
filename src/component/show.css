@@ -1,12 +1,13 @@
+/* Default styles */
 .show {
   width: 50%;
   height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
+
 h1,
 h2,
 h3,
@@ -25,10 +26,7 @@ h5 {
   flex-direction: column;
 }
 
-
-
 .today-box {
-   
   padding: 20px;
   margin-top: 10px;
   box-shadow: -1px 1px 48px -11px rgba(0, 0, 0, 0.31);
@@ -40,17 +38,71 @@ h5 {
   transition: opacity 1s ease-in-out;
 }
 
-
-
-
-
 .today-box-left {
   width: 40%;
 }
 
-.today-box-mid {
-  height: 22vh;
-  width: 0.2vw;
-  border-radius: 10px;
-  background-color: #9f9c9c;
+
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .show {
+    width: 100%;
+    height: auto;
+  }
+  
+  .show-today {
+    width: 90%;
+  }
+  
+  .today-box {
+    width: 90%;
+  }
+  
+  .today-box-left {
+    width: 100%;
+  }
+  
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .show {
+    width: 70%;
+  }
+  
+  .show-today {
+    width: 90%;
+  }
+  
+  .today-box {
+    width: 70%;
+  }
+  
+  .today-box-left {
+    width: 40%;
+  }
+  
+  
+}
+
+@media screen and (min-width: 1025px) {
+  .show {
+    width: 50%;
+  }
+  
+  .show-today {
+    width: 70%;
+  }
+  
+  .today-box {
+    width: 40vw;
+  }
+  
+  .today-box-left {
+    width: 40%;
+  }
+  
+ 
 }

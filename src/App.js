@@ -55,7 +55,8 @@ function App() {
           setData(response.data);
         })
         .catch((error) => {
-          console.log(error);
+          alert("someThing went wrong, try agian...");
+          
         });
     }
   }, [city, submit]);
