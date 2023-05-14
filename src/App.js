@@ -1,6 +1,10 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import ShowInformation from "./component/ShowInformation";
 import Search from "./component/search";
@@ -32,7 +36,9 @@ function App() {
   const apiKey = "eb9386714624d110f9ae272c53b364fa";
 
   useEffect(() => {
+   
     if (location) {
+      toast.info("you'r city weather is ready...")
       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lng}&appid=${apiKey}&units=metric`;
       axios
         .get(url)
@@ -46,16 +52,19 @@ function App() {
   }, [location]);
 
   useEffect(() => {
+   
     if (city) {
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&dt&timezone`;
 
       axios
         .get(url)
         .then((response) => {
+          toast.success('enjoy using this application')
           setData(response.data);
         })
         .catch((error) => {
-          alert("someThing went wrong, try agian...");
+          toast.error('city name is not valid !');
+
           
         });
     }
@@ -63,6 +72,7 @@ function App() {
 
   return (
     <div className="App">
+<ToastContainer/>
       <Search
         locationHandler={locationHandler}
         submitHandler={submitHandler}

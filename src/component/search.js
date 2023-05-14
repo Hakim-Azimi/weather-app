@@ -1,10 +1,16 @@
 import "./search.css";
 import { MdLocationOn, MdLocationSearching, MdSearch } from "react-icons/md";
+import { Tooltip } from 'react-tooltip';
+
+
+
+
 const Search = ({submitHandler, cityHandler, data, searchTerm, locationHandler}) => {
 
 
   return (
     <div className="search-division">
+      <Tooltip />
       <nav>
         <h1> Waether App</h1>
         <div className="nav-location">
@@ -34,9 +40,9 @@ const Search = ({submitHandler, cityHandler, data, searchTerm, locationHandler})
             placeholder="Enter location"
           />
 
-          <MdSearch onClick={submitHandler} className="search-icon" />
+          <MdSearch data-tip="Search" onClick={submitHandler} className="search-icon" />
 
-          <MdLocationSearching onClick={locationHandler} className="location-search" />
+          <MdLocationSearching data-tip="your location" onClick={locationHandler} className="location-search" />
         </form>
       </main>
     </div>
